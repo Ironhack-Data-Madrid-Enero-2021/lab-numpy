@@ -17,7 +17,7 @@ arr2 = np.random.rand(2,3,5)
 
 
 #la tercera opción: genero matriz 2 x 3 x 5 con número aleatorios entre 0-1
-np.random.random_sample((2,3,5))
+aar3 = np.random.random_sample((2,3,5))
 
 #4. Print a.
 print(a)
@@ -141,7 +141,7 @@ for vals in a:
                 new_f.append(75)
             elif va == d_mean:
                 new_f.append(50)
-            elif va == d_min:
+            elif va == d_min:  #NO SE QUE ESTA PASANDO CON ESTA CONDICIÓN Y LA SIGUIENTE (D_MIN Y  D_MAX) PORQUE NO ME LA ESTA PILLANDO POR LO QUE NO METE NI 0 NI 100. 
                 new_f.append(0)
             elif va == d_max:
                 new_f.append(100)
@@ -204,8 +204,6 @@ for vals in a:
                 g.append("D")
             elif va == d_max:
                 g.append("E")
-
-print(len(g))
 
 f = np.array(g).reshape(2,3,5)
 
