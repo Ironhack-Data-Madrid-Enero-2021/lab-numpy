@@ -1,5 +1,3 @@
-#1. Import the NUMPY package under the name np.
-
 import numpy as np
 
 #2. Print the NUMPY version and the configuration.
@@ -32,7 +30,7 @@ print(size_a == size_b)
 
 #8. Are you able to add a and b? Why or why not?
 
-
+print("It's no possible, they have a different shape")
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
 
@@ -43,7 +41,7 @@ print(c)
 
 d = np.add(a, c)
 print(d)
-print("because have the same shape")
+print("Because they have the same shape")
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
 
@@ -61,7 +59,7 @@ print(e)
 #13. Does e equal to a? Why or why not?
 
 print(a == e)
-
+print("they are equal because we multiply all the values ​​of a by 1(c)")
 
 #14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
 
