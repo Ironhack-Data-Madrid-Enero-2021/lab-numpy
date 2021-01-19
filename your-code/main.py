@@ -91,18 +91,22 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 f = []
-
-for n in d:
-        if n > d_min and n < d_mean:
-                f.append(25)
-        elif n > d_mean and n < d_max: 
-                f.append(75)
-        elif n == d_mean:
-                f.append(50)
-        elif n == d_min:
-                f.append(0)
-        elif n == d_max:
-                f.append(100)
+x = 2
+y = 3 
+z = 5 
+for n in range(x):
+        for n1 in range(y):
+                for n2 in range(z):
+                        if n2 > d_min and n2 < d_mean:
+                                f.append(25)
+                        elif n2 > d_mean and n2 < d_max: 
+                                f.append(75)
+                        elif n2 == d_mean:
+                                f.append(50)
+                        elif n2 == d_min:
+                                f.append(0)
+                        elif n2 == d_max:
+                                f.append(100)
 
 
 
@@ -144,3 +148,20 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+J = []
+x = 2
+y = 3 
+z = 5 
+for n in range(x):
+        for n1 in range(y):
+                for n2 in range(z):
+                        if n2 > d_min and n2 < d_mean:
+                                f.append("B")
+                        elif n2 > d_mean and n2 < d_max: 
+                                f.append("D")
+                        elif n2 == d_mean:
+                                f.append("c")
+                        elif n2 == d_min:
+                                f.append("A")
+                        elif n2 == d_max:
+                                f.append("E")
