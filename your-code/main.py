@@ -10,21 +10,33 @@ print(np.version.version)
 
 #3. Generate a 2x3x5 3-dimensional array with random values. Assign the array to variable "a"
 # Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
-a = 
-
-
+a = np.random.rand(2,3,5)
 #4. Print a.
+print(a)
+[[[0.11186108 0.07754028 0.73532745 0.9632379  0.83814931]
+  [0.24058531 0.86940004 0.09421108 0.54602605 0.87460787]
+  [0.75519882 0.28400636 0.07733935 0.23260288 0.74362001]]
 
+ [[0.77168503 0.01378199 0.10579013 0.55783691 0.62983709]
+  [0.30243544 0.42760051 0.69611652 0.78402275 0.28896196]
+  [0.80629989 0.64825692 0.39654709 0.4754763  0.95080633]]]
 
 
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
 #Assign the array to variable "b"
-
+b = np.ones((5,2,3))
 
 
 #6. Print b.
+print(b)
+[[1. 1. 1.]
+[1. 1. 1.]]
 
+ [[1. 1. 1.]
+  [1. 1. 1.]]
 
+ [[1. 1. 1.]
+  [1. 1. 1.]]]
 
 #7. Do a and b have the same size? How do you prove that in Python code?
 
