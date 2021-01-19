@@ -84,7 +84,8 @@ print(d_mean)
 f = np.empty((2,3,5))
 print(f)
 
-print("En Jupyter me da diferente a lo que me imprime la terminal")
+print("En Jupyter me da diferente a lo que me imprime la terminal, copio y pego abajo en visual lo que me sale.")
+
 '''
 [[[-0.00000000e+000 -0.00000000e+000  7.90505033e-323  0.00000000e+000
     0.00000000e+000]
@@ -99,6 +100,7 @@ print("En Jupyter me da diferente a lo que me imprime la terminal")
     2.29766951e-028]
   [ 9.50116089e-043  1.14484254e+243  9.51498384e-053  1.03723812e-314
     0.00000000e+000]]]
+    '''
 
 """
 #16. Populate the values in f. For each value in d, if it's larger than d_min but smaller than d_mean, assign 25 to the corresponding value in f.
@@ -108,12 +110,20 @@ Assign 0 to the corresponding value(s) in f for d_min in d.
 Assign 100 to the corresponding value(s) in f for d_max in d.
 In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
-
-df[(df.ages > 60) & (df.has_children)]
-
+"""
 
 
+f[(d > d_min) & (d < d_mean)] = 25
+f[(d > d_mean) & (d < d_max)] = 75
+f[(d == d_mean)] = 50
+f[d == d_min]= 0
+f[d == d_max]= 100
 
+print(f)
+
+
+
+"""
 
 #17. Print d and f. Do you have your expected f?
 For instance, if your d is:
@@ -125,6 +135,7 @@ array([[[1.85836099, 1.67064465, 1.62576044, 1.40243961, 1.88454931],
         [1.79129243, 1.74983003, 1.96028037, 1.85166831, 1.65450881],
         [1.18068344, 1.9587381 , 1.00656599, 1.93402165, 1.73514584]]])
 
+
 Your f should be:
 array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 75.,  75.,  25.,  25.,  25.],
@@ -133,8 +144,13 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
        [[ 25.,  25.,  25.,  25., 100.],
         [ 75.,  75.,  75.,  75.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
-"""
 
+
+"""
+print(d)
+print(f)
+
+print("no me salen iguales, si parecidos...(al ser random son diferentes cada vez que lo imprimo.")
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
@@ -148,3 +164,25 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+
+
+arr = []
+for d in f:
+        if (d == d_min) in f:
+                
+                arr.append("A")
+        elif (d > d_min) & (d < d_mean) in f:
+                
+                arr.append("B")
+        elif (d == d_mean) in f:
+                
+                arr.append("C")
+        elif (d > d_mean) & (d < d_max) in f:
+                
+                arr.append("D")
+        elif (d == d_max) in f:
+                
+                arr.append("E")
+print(d)
+
+print("Lo que presento está hecho para una lista y entiendo que tiene que ir en tres dimensiones y por tanto habra varios for, pero no se cómo ejecutarlo")
