@@ -22,14 +22,7 @@ b = np.ones((5,2,3))
 
 #6. Print b.
 print(b)
-[[1. 1. 1.]
-[1. 1. 1.]]
 
- [[1. 1. 1.]
-  [1. 1. 1.]]
-
- [[1. 1. 1.]
-  [1. 1. 1.]]]
 
 #7. Do a and b have the same size? How do you prove that in Python code?
 print(a.shape == b.shape)
@@ -47,13 +40,7 @@ c = b.reshape(2,3,5)
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
 a + c
 d = a + c
-array([[[1.11186108, 1.07754028, 1.73532745, 1.9632379 , 1.83814931],
-        [1.24058531, 1.86940004, 1.09421108, 1.54602605, 1.87460787],
-        [1.75519882, 1.28400636, 1.07733935, 1.23260288, 1.74362001]],
 
-       [[1.77168503, 1.01378199, 1.10579013, 1.55783691, 1.62983709],
-        [1.30243544, 1.42760051, 1.69611652, 1.78402275, 1.28896196],
-        [1.80629989, 1.64825692, 1.39654709, 1.4754763 , 1.95080633]]])
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
 print(a)
@@ -65,8 +52,8 @@ e = a * c
 print(e)
 #13. Does e equal to a? Why or why not?
 e == a
-'''Comparing arrays with Boolean == compares the elements of array.
-In this case, e == a in ALL the elements.''' 
+'''Comparing arrays with Boolean == compares the elements of array'''
+'''In this case, e == a in ALL the elements.''' 
 
 
 #14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
@@ -93,12 +80,14 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 
- 
-for [i] in f:
-        
-0 for f in f if 
+f[(d_min < d) & (d < d_min)] = 25
+print (f)
+f[(d_mean < d) & (d < d_max)] = 75
+f[d_mean == d] = 50
+f[d_min == d] = 0
+f[d_max == d] = 100 
 
-f[i] for d in d if d_min < d < d_min:
+
 
         
 
@@ -123,7 +112,8 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 75.,  75.,  75.,  75.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
 """
-
+print(d)
+print(f)
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
