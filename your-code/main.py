@@ -31,12 +31,12 @@ print(b)
 
 print(a==b)
 
-#False, no tienen el mismo size.
+print ("False, no tienen el mismo size")
 
 
 #8. Are you able to add a and b? Why or why not?
 
-#Para poner hacer el add tienen que tener el mismo número de filas y de columnas. En este caso no es así.
+print("Para poner hacer el add tienen que tener el mismo número de filas y de columnas. En este caso no es así")
 
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
@@ -44,11 +44,12 @@ print(a==b)
 c = b.transpose (1,2,0)
 print(c)
 
-
+print("en esta pregunta me he liado porque transpose lo entiendo para darle la vuelta al array")
+print("he buscado en internet y me aparecía como lo he aplicado arriba y he entendido la lógica")
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
 
 d = np.add(a,c)
-#ahora si se puede porque son iguales.
+print("ahora si se puede porque son iguales.")
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
 
@@ -66,7 +67,7 @@ print(e)
 
 print(e==a)
 
-#True,si son iguales
+print("True,si son iguales.")
 
 #14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
 
@@ -83,7 +84,7 @@ print(d_mean)
 f = np.empty((2,3,5))
 print(f)
 
-#En Jupyter me da diferente a lo que me imprime la terminal.
+print("En Jupyter me da diferente a lo que me imprime la terminal")
 '''
 [[[-0.00000000e+000 -0.00000000e+000  7.90505033e-323  0.00000000e+000
     0.00000000e+000]
@@ -107,6 +108,11 @@ Assign 0 to the corresponding value(s) in f for d_min in d.
 Assign 100 to the corresponding value(s) in f for d_max in d.
 In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
+
+df[(df.ages > 60) & (df.has_children)]
+
+
+
 
 
 #17. Print d and f. Do you have your expected f?
