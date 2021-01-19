@@ -11,6 +11,10 @@ print(np.show_config())
 # Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
 
 a = np.random.randn(2, 3, 5)
+a1 = np.random.randint(100, size = (2,3,5))
+print(a1)
+a2 = np.random.choice(range(2,200,2), size = (2,3,5))
+print(a2)
 
 #4. Print a.
 
@@ -132,3 +136,11 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+
+g = np.empty((2,3,5), dtype = object)
+g[(d > d_min) & (d < d_mean)] = "B"
+g[(d > d_mean) & (d < d_max)] = "D"
+g[(d == d_mean)] = "C"
+g[(d == d_min)] = "A"
+g[(d == d_max)] = "E"
+print(g)
