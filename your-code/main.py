@@ -114,7 +114,7 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 
-def mapping_function(f):
+def mapping_function(value):
 
         if value > d_min and value < d_mean:
             return '25'
@@ -129,10 +129,29 @@ def mapping_function(f):
         else:
             return '100'
 
-mapped_values = map(mapping_function, d)
+    mapped_values = map(mapping_function, d )
 
-print (mapped_values)
-
+    print (mapped_values)
+    
+'''for i, value_i in enumerate(d):
+    for j, value_j in enumerate(value_i):
+        for index, value in enumerate(value_j):
+            if value > d_min and value < d_mean:
+                value = 25
+                f[i][j][index] = value
+            if value > d_mean and value < d_max:
+                value = 75
+                f[i][j][index] = value
+            if value == d_mean:
+                value = 50
+                f[i][j][index] = value
+            if value == d_min:
+                value = 0
+                f[i][j][index] = value
+            if value == d_max:
+                value = 100
+                f[i][j][index] = value
+print(f)'''
 
 
 
