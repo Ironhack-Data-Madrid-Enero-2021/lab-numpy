@@ -30,7 +30,8 @@ print(b.size)
 
 
 #8. Are you able to add a and b? Why or why not?
-print(a+b)
+#
+#print(a+b)
 # it is not possible because they have different shapes
 
 #9. Transpose b so that it has the same structure of a (v.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
@@ -81,8 +82,8 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 
-
-for v, value_v in d:
+"""con bucles for no me sale"""
+"""for v, value_v in d:
         for x, value_x in value_v:
                 if value > d_min and value < d_mean:
                         value = 25
@@ -102,7 +103,14 @@ for v, value_v in d:
         
                 if value == d_max:
                         value = 100
-                        f[v][x] = value 
+                        f[v][x] = value """
+
+"""como en clase"""
+f[(d>d_min) & (d_mean>d)]=25
+f[(d>d_mean) & (d_max>d)]=75
+f[d==d_mean]=50
+f[d==d_min]=0
+f[d==d_max]=100
 
 
 """
@@ -140,3 +148,11 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+f[(d>d_min) & (d_mean>d)] = "A"
+f[(d>d_mean) & (d_max>d)] = "B"
+f[d==d_mean] = "C"
+f[d==d_min] = "D"
+f[d==d_max] = "E"
+
+print(d)
+print(f)
