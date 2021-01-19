@@ -12,15 +12,8 @@ print(np.version.version)
 # Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
 a = np.random.rand(2,3,5)
 #4. Print a.
+
 print(a)
-[[[0.11186108 0.07754028 0.73532745 0.9632379  0.83814931]
-  [0.24058531 0.86940004 0.09421108 0.54602605 0.87460787]
-  [0.75519882 0.28400636 0.07733935 0.23260288 0.74362001]]
-
- [[0.77168503 0.01378199 0.10579013 0.55783691 0.62983709]
-  [0.30243544 0.42760051 0.69611652 0.78402275 0.28896196]
-  [0.80629989 0.64825692 0.39654709 0.4754763  0.95080633]]]
-
 
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
 #Assign the array to variable "b"
@@ -39,45 +32,56 @@ print(b)
   [1. 1. 1.]]]
 
 #7. Do a and b have the same size? How do you prove that in Python code?
-
-
+print(a.shape == b.shape)
 
 
 #8. Are you able to add a and b? Why or why not?
-
+a + b
+''' a + b are not equal in shape'''
 
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
-
+c = b.reshape(2,3,5)
 
 
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
+a + c
+d = a + c
+array([[[1.11186108, 1.07754028, 1.73532745, 1.9632379 , 1.83814931],
+        [1.24058531, 1.86940004, 1.09421108, 1.54602605, 1.87460787],
+        [1.75519882, 1.28400636, 1.07733935, 1.23260288, 1.74362001]],
 
-
+       [[1.77168503, 1.01378199, 1.10579013, 1.55783691, 1.62983709],
+        [1.30243544, 1.42760051, 1.69611652, 1.78402275, 1.28896196],
+        [1.80629989, 1.64825692, 1.39654709, 1.4754763 , 1.95080633]]])
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
-
-
-
+print(a)
+print(d)
+'''it has added 1 to each value in d'''
 
 #12. Multiply a and c. Assign the result to e.
-
-
-
+e = a * c
+print(e)
 #13. Does e equal to a? Why or why not?
-
-
+e == a
+'''Comparing arrays with Boolean == compares the elements of array.
+In this case, e == a in ALL the elements.''' 
 
 
 #14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
-
-
+d_max = d.max()
+d_min = d.min()
+d_mean = d.mean()
+print ("d_max = ",d.max())
+print ("d_min = ",d.min())
+print ("d_mean = ",d.mean())
 
 
 #15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
-
-
-
+d.shape
+f = np.empty((2,3,5))
+print(f)
 
 """
 #16. Populate the values in f. For each value in d, if it's larger than d_min but smaller than d_mean, assign 25 to the corresponding value in f.
@@ -89,7 +93,14 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 
+ 
+for [i] in f:
+        
+0 for f in f if 
 
+f[i] for d in d if d_min < d < d_min:
+
+        
 
 
 """
