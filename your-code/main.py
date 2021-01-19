@@ -145,12 +145,30 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+print(f.shape[0])
+print(f.shape[1])
+print(f.shape[2])
 
-
-f[(d_mean>d) & (d>d_min)]="A"
-f[(d_max>d) & (d>d_mean)]="B"
-f[d==d_mean]="C"
-f[d==d_min]="D"
-f[d==d_max]="E"
-print("New f: ")
-print(f)
+dim1=[]
+dim2=[]
+dim3=[]
+for i in range(f.shape[0]):
+        for j in range(f.shape[1]):
+                for k in range(f.shape[2]):
+                        if (d_mean>e[i][j][k]) and (e[i][j][k]>d_min):
+                                dim1.append('A')
+                        elif (d_max>e[i][j][k]) and (e[i][j][k]>d_mean):
+                                dim1.append('B')
+                        elif e[i][j][k]==d_mean:
+                                dim1.append('C')
+                        elif e[i][j][k]==d_min:
+                                dim1.append('D')
+                        elif e[i][j][k]==d_max:
+                                dim1.append('E')
+                dim2.append(dim1)
+                dim1=[]
+        dim3.append(dim2)
+        dim2=[]
+                
+                        
+print(dim3)
