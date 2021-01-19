@@ -84,8 +84,16 @@ Assign 100 to the corresponding value(s) in f for d_max in d.
 In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
+f[(d > d_min) & (d < d_mean)] = 25
+f[(d > d_mean) & (d < d_max)] = 75
+f[(d == d_mean)] = 50
+f[d == d_min]= 0
+f[d == d_max]= 100
 
 
+
+print(f)
+print(d)
 
 
 """
@@ -108,7 +116,18 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 75.,  75.,  75.,  75.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
 """
+"""
+print("Mis resultados son estos.")
 
+[[[ 75.  25.  75.  75.  25.]
+  [ 75.  75.  25.  75.  25.]
+  [ 75.  25.   0.  75.  25.]]
+
+ [[100.  25.  25.  25.  75.]
+  [ 75.  75.  25.  75.  75.]
+  [ 75.  75.  25.  25.  75.]]]
+
+"""
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
@@ -122,3 +141,26 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+arr = []
+for d in f:
+        if (d == d_min) in f:
+                d = "A"
+                arr.append(d)
+                next
+        elif (d > d_min) & (d < d_mean) in f:
+                d = "B"
+                arr.append(d)
+                next
+        elif (d == d_mean) in f:
+                d = "C"
+                arr.append(d)
+        elif (d > d_mean) & (d < d_max) in f:
+                d = "D"
+                arr.append(d)
+        elif (d == d_max) in f:
+                d = "E"
+                arr.append(d)
+
+print(d)
+
+#después de mucho trabajo, no se como plantear las dimensiones.
