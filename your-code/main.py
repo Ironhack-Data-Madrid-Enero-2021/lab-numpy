@@ -114,26 +114,7 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 
-def mapping_function(value):
-
-        if value > d_min and value < d_mean:
-            return '25'
-        elif value > d_mean and value < d_max:
-            return '75'
-        elif value > d_max:
-            return '50'  
-        elif value == d_mean:
-            return '50' 
-        elif value == d_min:
-            return '50'
-        else:
-            return '100'
-
-    mapped_values = map(mapping_function, d )
-
-    print (mapped_values)
-    
-'''for i, value_i in enumerate(d):
+for i, value_i in enumerate(d):
     for j, value_j in enumerate(value_i):
         for index, value in enumerate(value_j):
             if value > d_min and value < d_mean:
@@ -151,9 +132,7 @@ def mapping_function(value):
             if value == d_max:
                 value = 100
                 f[i][j][index] = value
-print(f)'''
-
-
+#print(f)
 
 
 """
@@ -176,7 +155,8 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 75.,  75.,  75.,  75.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
 """
-
+print (d)
+print (f)
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
@@ -190,3 +170,19 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+
+f = np.full([2,3,5],"")
+for i in range(len(d)):
+    for j in range(len(d[i])):
+        for k in range(len(d[i][j])):
+            if d[i][j][k] > d_min and d[i][j][k] < d_mean:
+                f[i][j][k] = "B"
+            elif d[i][j][k] > d_mean and d[i][j][k] < d_max:
+                f[i][j][k] = "D"
+            elif d[i][j][k] == d_mean:
+                f[i][j][k] = "C"
+            elif d[i][j][k] == d_max:
+                f[i][j][k] = "E"
+            else:
+                f[i][j][k] = "A"
+print(f)
