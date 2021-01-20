@@ -171,8 +171,21 @@ Assign 100 to the corresponding value(s) in f for d_max in d.
 In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
-
-
+for i in range(len(d)):
+    for y in range(len(d[0])):
+        for z in range(len(d[0, 0])):
+            if d[i, y, z] > d_min and d[i, y, z,] < d_mean:
+                f[i, y, z] = 25
+            elif d[i, y, z] > d_mean and d[i,y,z,] < d_max:
+                f[i, y, z] = 75
+            elif d[i, y, z] == d_mean:
+                f[i, y, z] = 50
+            elif d[i, y, z] == d_min:
+                f[i, y, z] = 0
+            elif d[i, y, z] == d_max:
+                f[i, y, z] = 100
+             
+# creo que voy bien encaminado por aquí, de hecho no se porqué no me sale, lo veré en clase...😩
 
 
 """
