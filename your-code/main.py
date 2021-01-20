@@ -25,9 +25,8 @@ print(a)
 
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
 #Assign the array to variable "b"
-#¡¡CAMBIO 5x2x3 POR 5x3x2 NO SE SI SERA FALLO MIO O NO PERO SINO NO SALE EN LA TRASPUESTA!!!
 
-b = np.ones((5, 3, 2), dtype=int)
+b = np.ones((5, 2, 3), dtype=int)
 
 
 #6. Print b.
@@ -45,8 +44,8 @@ print(f"\n\t a and b have the same size? {np.size(a) == np.size(b)}")
 
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
-c = b.transpose()
 
+c = np.transpose(b, (1,2,0))
 
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
 
